@@ -19,7 +19,7 @@
 ## Copyright 2013 Anthony Nordquist
 
 
-tail -f /usr/bin/thunar-view-metadata-script | yad --progress --title=" " --width="325" --window-icon="info" --image="info" --text="Reading File Metadata" --pulsate --auto-close  --button="gtk-cancel:9" &
+tail -f /usr/bin/thunar-view-metadata-script | yad --progress --title=" " --width="325" --window-icon="gtk-info" --image="gtk-info" --text="Reading File Metadata" --pulsate --auto-close  --button="gtk-cancel:9" &
 
 ret="$?"
 
@@ -42,6 +42,6 @@ ToKill=$(pgrep -f 'tail -f /usr/bin/thunar-view-metadata-script')
 
 kill $ToKill
 
-echo -n "${MetaArray[@]}" | yad --text-info --window-icon="info" --editable --title="Metadata Reader" --height="800" --width="800" --button=$"gtk-quit:3"
+echo -n "${MetaArray[@]}" | yad --text-info --window-icon="gtk-info" --editable --title="Metadata Reader" --height="800" --width="800" --button=$"gtk-quit:3"
 
 exit
